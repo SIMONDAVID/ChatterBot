@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from chatterbot.conversation.statement import StatementMixin
 from chatterbot import constants
 from django.db import models
