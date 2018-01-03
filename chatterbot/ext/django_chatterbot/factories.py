@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 These factories are used to generate fake data for testing.
 """
