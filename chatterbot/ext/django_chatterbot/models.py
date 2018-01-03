@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from chatterbot.ext.django_chatterbot.abstract_models import (
     AbstractBaseConversation, AbstractBaseResponse,
     AbstractBaseStatement, AbstractBaseTag
