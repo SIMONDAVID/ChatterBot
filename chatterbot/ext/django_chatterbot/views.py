@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import json
 from django.views.generic import View
 from django.http import JsonResponse
