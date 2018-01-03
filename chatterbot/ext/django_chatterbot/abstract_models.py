@@ -59,9 +59,9 @@ class AbstractBaseStatement(models.Model, StatementMixin):
 
     def __str__(self):
         if len(self.text.strip()) > 60:
-            return '{}...'.format(self.text[:57])
+            return '{}...'.format(self.text[:57].encode('utf8'))
         elif len(self.text.strip()) > 0:
-            return self.text
+            return self.text.encode('utf8')
         return '<empty>'
 
     def __init__(self, *args, **kwargs):
@@ -206,8 +206,8 @@ class AbstractBaseResponse(models.Model):
         statement = self.statement.text
         response = self.response.text
         return '{} => {}'.format(
-            statement if len(statement) <= 20 else statement[:17] + '...',
-            response if len(response) <= 40 else response[:37] + '...'
+            statement.encode('utf8') if len(statement) <= 20 else statement[:17].encode('utf8') + '...',
+            response.encode('utf8') if len(response) <= 40 else response[:37].encode('utf8') + '...'
         )
 
     def serialize(self):
